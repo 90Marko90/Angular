@@ -1,0 +1,41 @@
+h1 {
+    position: relative;
+    font-size: 30px;
+    top: 100px;
+    left: 150px;
+    text-decoration: underline overline hotpink;
+}
+
+.text {
+    position: relative;
+    top: 100px;
+    left: 150px;
+}
+
+.user-image {
+    position: relative;
+    padding-right: 30px;
+    width: 35px;
+    height: 35px;
+}
+
+.comment {
+    position: relative;
+    top: 50px;
+    left: 150px;
+    width: 300px;
+}
+
+.single-comment { 
+    background-color: #8EC5FC;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    position: relative;
+    display: flex;
+    border-style: outset;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 25px;
+    margin: 10px;
+    width: 300px;
+    height: 10px;
+}

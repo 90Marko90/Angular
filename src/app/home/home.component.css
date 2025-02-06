@@ -1,0 +1,21 @@
+body {
+  background-image: url(src\assets\Images\Wallpaper.jpg);
+  background-size: cover;
+  border-radius: 20px;
+  display: flex;
+  min-height: 100vh;
+}
+
+.marquee {
+  position: relative;
+  align-content: end;
+  margin-bottom: 100px;
+  animation: marquee 100s linear infinite;
+}
+
+.marquee img {
+  width: 200px;
+  height: 150px;
+  margin-right: 20px;
+  border-radius: 15px;
+}

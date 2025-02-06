@@ -1,0 +1,85 @@
+<body>
+  <h1>Create a player</h1>
+    <form [formGroup]="playerForm" (ngSubmit)="onSubmit()">
+      <div class="prime-div">
+      <div class="left">
+        <div>
+            <mat-form-field class="input">
+                <mat-label for="first-name">First name</mat-label>
+                <input matInput id="first-name" type="text" formControlName="first-name">
+            </mat-form-field>
+
+          </div>
+        
+          <div>
+            <mat-form-field class="input">
+            <mat-label for="last-name">Last name</mat-label>
+            <input matInput id="last-name" type="text" formControlName="last-name">
+          </mat-form-field>
+          </div>
+
+          <div>
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email">
+          </mat-form-field>
+        </div>
+
+          <div>
+            <mat-form-field class="input">
+            <mat-label for="gender">Gender</mat-label>
+            <input matInput id="gender" type="text" formControlName="gender">
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field class="input">
+            <mat-label for="birth-date">Birth date</mat-label>
+            <input matInput id="birth-date" type="text" formControlName="birth-date">
+          </mat-form-field>
+          </div>
+        </div>
+
+
+
+        <div class="right">
+          <div>
+            <mat-form-field class="input">
+            <mat-label for="league-status">League status</mat-label>
+            <input matInput id="league-status" type="text" formControlName="league-status">
+          </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field class="input">
+            <mat-label for="hand">Hand you play</mat-label>
+            <input matInput id="hand" type="text" formControlName="hand">
+          </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field class="input">
+            <mat-label for="rating">Rating</mat-label>
+            <input matInput id="rating" type="text" formControlName="rating">
+          </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field class="input">
+            <mat-label for="rating">Rating</mat-label>
+            <input matInput id="rating" type="text" formControlName="rating">
+          </mat-form-field>
+          </div>
+          
+          <div>
+            <mat-form-field class="input">
+            <mat-label for="registration-date">Registration date</mat-label>
+            <input matInput id="registration-date" type="text" formControlName="registration-date">
+          </mat-form-field>
+          </div>
+        </div>
+      </div>
+        
+        <button mat-raised-button class="button" type="submit">Create</button>
+    </form>
+</body>

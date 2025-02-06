@@ -1,0 +1,64 @@
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule} from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatBadgeModule } from '@angular/material/badge';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { CommentsComponent } from './app/comments/comments.component';
+import { CommentFormComponent } from './app/comment-form/comment-form.component';
+import { CommentsService } from './app/comments/comments.service';
+import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LogInComponent } from './app/log-in/log-in.component';
+import { ButtonComponent } from './app/log-in/button/button.component';
+import { SigninComponent } from './app/signin/signin.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatFormFieldModule } from '@angular/material/form-field'; 
+import { AuthContentComponent } from './app/auth-content/auth-content.component';
+import { AxiosService } from './axios.service';
+
+
+
+@NgModule({
+  declarations: [
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CommonModule, // allow *ngFor *ngIf 
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule, 
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule, 
+    MatButtonModule,
+    MatCheckboxModule,
+    MatIconModule,
+    MatDividerModule,
+    BrowserAnimationsModule,
+    MatBadgeModule,
+    FontAwesomeModule,
+    AppComponent,
+    CommentsComponent,
+    CommentFormComponent,
+    LogInComponent,
+    ButtonComponent,
+    SigninComponent,
+    AuthContentComponent,
+  ],
+  providers: [AxiosService, CommentsService, provideAnimationsAsync()],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  
+})
+
+export class AppModule {
+  
+ }
