@@ -14,10 +14,11 @@ export class LogInComponent {
 	@Output() onSubmitLoginEvent = new EventEmitter();
 	@Output() onSubmitRegisterEvent = new EventEmitter();
 
-	active: string = "login";
-	username: string = "";
-	login: string = "";
-	password: string = "";
+  active: string = "login"; 
+  username: string = "";
+  login: string = "";
+  password: string = "";
+  role: string = "";
 
 	onLoginTab(): void {
 		this.active = "login";
@@ -27,11 +28,11 @@ export class LogInComponent {
 		this.active = "register";
 	}
 
-	onSubmitLogin(): void {
-		this.onSubmitLoginEvent.emit({ "login": this.login, "password": this.password });
-	}
+  onSubmitLogin(): void {
+    this.onSubmitLoginEvent.emit({"login": this.login, "password": this.password});
+  }
 
-	onSubmitRegister(): void {
-		this.onSubmitRegisterEvent.emit({ "login": this.login, "password": this.password });
-	}
+  onSubmitRegister(): void {
+    this.onSubmitRegisterEvent.emit({"username": this.username, "password": this.password, "role": this.role});
+  }
 }

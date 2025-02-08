@@ -27,7 +27,7 @@ export class AuthContentComponent implements OnInit {
             } else if (error.response) {
               this.data = error.response.code;
             } else {
-              console.error('Unexpected error:', error);
+              console.log('Unexpected error:', error);
             }
           }
         );
