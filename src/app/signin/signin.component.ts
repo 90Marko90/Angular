@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { AxiosService } from 'src/axios.service';
 import { LogInComponent } from '../log-in/log-in.component';
 import { ButtonComponent } from '../log-in/button/button.component';
-import { AuthContentComponent } from '../auth-content/auth-content.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AuthContentComponent } from '../auth-content/auth-content.component';
 
 @Component({
 	selector: 'app-signin',
@@ -40,7 +40,6 @@ export class SigninComponent {
 						this.componentToShow = "welcome";
 					}
 				);
-
 	}
 
 	onRegister(input: any): void {
@@ -48,8 +47,7 @@ export class SigninComponent {
 			"POST",
 			"/register",
 			{
-				firstName: input.firstName,
-				lastName: input.lastName,
+				username: input.username,
 				login: input.login,
 				password: input.password
 			}).then(

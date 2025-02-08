@@ -4,6 +4,7 @@
     <app-log-in *ngIf="componentToShow == 'login'" 
     (onSubmitLoginEvent)="onLogin($event)" 
     (onSubmitRegisterEvent)="onRegister($event)" />
-    <app-auth-content *ngIf="componentToShow == 'messages'" />
+    <app-auth-content *ngIf="componentToShow == 'messages'"/>
+
   </div>
 </body>

@@ -15,8 +15,7 @@ export class LogInComponent {
 	@Output() onSubmitRegisterEvent = new EventEmitter();
 
 	active: string = "login";
-	firstName: string = "";
-	lastName: string = "";
+	username: string = "";
 	login: string = "";
 	password: string = "";
 

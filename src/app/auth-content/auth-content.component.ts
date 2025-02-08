@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core'; 
+import { Component, OnInit } from '@angular/core';
 import { AxiosService } from 'src/axios.service';
 
 @Component({
@@ -11,25 +11,25 @@ import { AxiosService } from 'src/axios.service';
 export class AuthContentComponent implements OnInit {
   data: string[] = [];
 
-  constructor(private axiosService: AxiosService) {}
+  constructor(private axiosService: AxiosService) { }
 
   ngOnInit(): void {
     this.axiosService.request(
-        "GET",
-        "/messages",
-        {}).then(
+      "GET",
+      "/messages",
+      {}).then(
         (response) => {
-            this.data = response.data;
+          this.data = response.data;
         }).catch(
-        (error) => {
-            if (error.response.status === 401) {
-                this.axiosService.setAuthToken(null);
+          (error) => {
+            if (error.response && error.response.status === 401) {
+              this.axiosService.setAuthToken(null);
+            } else if (error.response) {
+              this.data = error.response.code;
             } else {
-                this.data = error.response.code;
+              console.error('Unexpected error:', error);
             }
-
-        }
-    );
+          }
+        );
   }
-
 }
