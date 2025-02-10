@@ -1,10 +1,14 @@
 <body>
+  <div class="java-class">
+    <h5 class="card-title">Backend response</h5>
+    <ul>
+      <li *ngFor="let line of data">{{line}}</li>
+    </ul>
+  </div>
   <div>
     <app-button (loginEvent)="showComponent('login')" (logoutEvent)="showComponent('welcome')" />
-    <app-log-in *ngIf="componentToShow == 'login'" 
-    (onSubmitLoginEvent)="onLogin($event)" 
-    (onSubmitRegisterEvent)="onRegister($event)" />
-    <app-auth-content *ngIf="componentToShow == 'messages'"/>
-
+    <app-welcome-content *ngIf="componentToShow == 'welcome'" />
+    <app-log-in *ngIf="componentToShow == 'login'" (onSubmitLoginEvent)="onLogin($event)"
+      (onSubmitRegisterEvent)="onRegister($event)" />
   </div>
 </body>

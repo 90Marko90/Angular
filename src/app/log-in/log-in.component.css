@@ -2,13 +2,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    
 }
 
 form {
-    position: relative;
-    width: 640px;
+    width: 600px;
     height: 500px;
+    margin-top: 30px;
     backdrop-filter: blur(50px);
     color:#314755;
     font-size: 20px;
@@ -19,28 +19,4 @@ form {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-button {
-    font-weight: bold;
-}
-
-.btn {
-    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
-    padding: 5px 15px 5px 15px; 
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    font-weight: 300;
-    color: white;
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    position: relative;
-    display: flex;
-}
-
-.btn:hover {
-    background-position: right center;
-    color: #fff;
-    text-decoration: none;
 }

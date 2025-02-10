@@ -1,0 +1,10 @@
+div {
+    position: relative;
+    margin-top: 150px;
+    font-size: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

@@ -19,9 +19,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LogInComponent } from './app/log-in/log-in.component';
 import { ButtonComponent } from './app/log-in/button/button.component';
 import { SigninComponent } from './app/signin/signin.component';
+import { WelcomeContentComponent } from './app/welcome-content/welcome-content.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatFormFieldModule } from '@angular/material/form-field'; 
-import { AuthContentComponent } from './app/auth-content/auth-content.component';
 import { AxiosService } from './axios.service';
 
 
@@ -52,7 +52,7 @@ import { AxiosService } from './axios.service';
     LogInComponent,
     ButtonComponent,
     SigninComponent,
-    AuthContentComponent,
+    WelcomeContentComponent,
   ],
   providers: [AxiosService, CommentsService, provideAnimationsAsync()],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
