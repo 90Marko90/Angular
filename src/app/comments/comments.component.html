@@ -1,25 +1,31 @@
-<h1>"Add your comment for this section and share your thoughts with the community"</h1>
-<div class="text">
-    <p><b>Game Predictions:</b> Let your readers predict the outcomes of upcoming games and share their opinions on key
-        matchups.</p>
+<body>
+    <h1>"Add your comment for this section and share your thoughts with the community"</h1>
+    <div class="text">
+        <p><b>Game Predictions:</b> Let your readers predict the outcomes of upcoming games and share their opinions on
+            key
+            matchups.</p>
 
-    <p><b>Player of the Week:</b> Post game highlights and let fans share their reactions, thoughts, and emotions.</p>
+        <p><b>Player of the Week:</b> Post game highlights and let fans share their reactions, thoughts, and emotions.
+        </p>
 
-    <p><b>Fan Reactions:</b> Invite fans to create and share sports-related memes for a bit of humor and camaraderie.
-    </p>
+        <p><b>Fan Reactions:</b> Invite fans to create and share sports-related memes for a bit of humor and
+            camaraderie.
+        </p>
 
-    <p><b>Meme Contest:</b> Let your readers predict the outcomes of upcoming games and share their opinions on key
-        matchups.</p>
+        <p><b>Meme Contest:</b> Let your readers predict the outcomes of upcoming games and share their opinions on key
+            matchups.</p>
 
-    <p><b>Fantasy Team Advice:</b> Encourage readers to share their fantasy team picks, strategies, and advice.</p>
-</div>
-<div class="comment">
-    <app-comment-form (handleSubmit)="addComment($event)"></app-comment-form> <!-- inserts Input with Button form -->
-    <div *NgFor="let comment of comments" class="single-comment">
-        <img src="assets/Images/User.png" class="user-image" alt="User" />
-        {{comment.user}}
-        {{comment.createdAt}}
-        <br>
-        {{comment.body}}
+        <p><b>Fantasy Team Advice:</b> Encourage readers to share their fantasy team picks, strategies, and advice.</p>
     </div>
-</div>
+    <div class="comment">
+        <app-comment-form (handleSubmit)="addComment($event)"></app-comment-form>
+        <!-- inserts Input with Button form -->
+        <div *ngFor="let comment of comments" class="single-comment">
+            <img src="assets/Images/User.png" class="user-image" alt="User" />
+            {{comment.user}}
+            {{comment.createdAt}}
+            <br>
+            {{comment.body}}
+        </div>
+    </div>
+</body>

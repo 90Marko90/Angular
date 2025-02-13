@@ -1,16 +1,17 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body {
+    margin-left: 150px;
+}
 
 h1 {
     color:#314755;
     position: fixed;
     top: 100px;
-    left: 150px;
 }
 
 form {
     position: fixed; 
     top: 130px;
-    left: 150px;
 }
 
 .prime-div {
@@ -19,6 +20,10 @@ form {
 }
 
 .left {
+    margin-right: 30px;
+}
+
+.middle {
     margin-right: 30px;
 }
 
@@ -37,7 +42,6 @@ button {
 
 button:hover {
     background-position: right center;
-    /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
 }
@@ -45,7 +49,6 @@ button:hover {
 .select {
     position: fixed;
     top: 100px;
-    left: 150px;
     font-weight: bold;
     font-size: 15px;
   }

@@ -50,6 +50,7 @@ export class SigninComponent {
 			{
 				username: input.username,
 				password: input.password,
+				role: input.role,
 			}).then(
 				response => {
 					this.axiosService.setAuthToken(response.data.token);

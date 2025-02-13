@@ -1,12 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ButtonComponent } from './button/button.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
 	selector: 'app-log-in',
 	standalone: true,
-	imports: [FormsModule, ButtonComponent, CommonModule],
+	imports: [FormsModule, CommonModule],
 	templateUrl: './log-in.component.html',
 	styleUrl: './log-in.component.css'
 })

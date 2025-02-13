@@ -1,94 +1,81 @@
 <body>
-  <mat-form-field class="select">
+  <!-- <mat-form-field class="select">
     <mat-label>Select</mat-label>
     <mat-select class="select" [(ngModel)]="matchCategory" (ngModelChange)="dropDown($event)">
       <mat-option value="0">All</mat-option>
       <mat-option value="1">Player 1</mat-option>
       <mat-option value="2">Player 2</mat-option>
     </mat-select>
-  </mat-form-field>
-  
+  </mat-form-field> -->
+
   <h1>Create a player</h1>
-    <form [formGroup]="playerForm" (ngSubmit)="onSubmit()">
-      <div class="prime-div">
+  <form (ngSubmit)="onSubmitPlayer()" #loginForm="ngForm">
+    <div class="prime-div">
       <div class="left">
         <div>
-            <mat-form-field class="input">
-                <mat-label for="first-name">First name</mat-label>
-                <input matInput id="first-name" type="text" formControlName="first-name">
-            </mat-form-field>
-
-          </div>
-        
-          <div>
-            <mat-form-field class="input">
-            <mat-label for="last-name">Last name</mat-label>
-            <input matInput id="last-name" type="text" formControlName="last-name">
+          <mat-form-field class="input">
+            <mat-label for="firstName">First name</mat-label>
+            <input matInput type="firstName" id="firstName" name="firstName" class="form-control" [(ngModel)]="firstName" />
           </mat-form-field>
-          </div>
+        </div>
 
-          <div>
+        <div>
+          <mat-form-field class="input">
+            <mat-label for="lastName">Last name</mat-label>
+            <input matInput type="lastName" id="lastName" name="lastName" class="form-control" [(ngModel)]="lastName" />
+          </mat-form-field>
+        </div>
+        <div>
           <mat-form-field class="example-full-width">
-            <mat-label>Email</mat-label>
-            <input matInput type="email" formControlName="email">
+            <mat-label for="email">Email</mat-label>
+            <input matInput type="email" id="email" name="email" class="form-control" [(ngModel)]="email" />
           </mat-form-field>
-        </div>
-
-          <div>
-            <mat-form-field class="input">
-            <mat-label for="gender">Gender</mat-label>
-            <input matInput id="gender" type="text" formControlName="gender">
-            </mat-form-field>
-          </div>
-
-          <div>
-            <mat-form-field class="input">
-            <mat-label for="birth-date">Birth date</mat-label>
-            <input matInput id="birth-date" type="text" formControlName="birth-date">
-          </mat-form-field>
-          </div>
-        </div>
-
-
-
-        <div class="right">
-          <div>
-            <mat-form-field class="input">
-            <mat-label for="league-status">League status</mat-label>
-            <input matInput id="league-status" type="text" formControlName="league-status">
-          </mat-form-field>
-          </div>
-
-          <div>
-            <mat-form-field class="input">
-            <mat-label for="hand">Hand you play</mat-label>
-            <input matInput id="hand" type="text" formControlName="hand">
-          </mat-form-field>
-          </div>
-
-          <div>
-            <mat-form-field class="input">
-            <mat-label for="rating">Rating</mat-label>
-            <input matInput id="rating" type="text" formControlName="rating">
-          </mat-form-field>
-          </div>
-
-          <div>
-            <mat-form-field class="input">
-            <mat-label for="rating">Rating</mat-label>
-            <input matInput id="rating" type="text" formControlName="rating">
-          </mat-form-field>
-          </div>
-          
-          <div>
-            <mat-form-field class="input">
-            <mat-label for="registration-date">Registration date</mat-label>
-            <input matInput id="registration-date" type="text" formControlName="registration-date">
-          </mat-form-field>
-          </div>
         </div>
       </div>
+
+      <div class="middle">
+        <div>
+          <mat-form-field class="input">
+            <mat-label for="gender">Gender</mat-label>
+            <input matInput type="gender" id="gender" name="gender" class="form-control" [(ngModel)]="gender" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="input">
+            <mat-label for="birthDate">Birth date</mat-label>
+            <input matInput type="birthDate" id="birthDate" name="birthDate" class="form-control" [(ngModel)]="birthDate" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="input">
+            <mat-label for="leagueStatus">League status</mat-label>
+            <input matInput type="leagueStatus" id="leagueStatus" name="leagueStatus" class="form-control" [(ngModel)]="leagueStatus" />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="right">
+        <div>
+          <mat-form-field class="input">
+            <mat-label for="hand">Hand you play</mat-label>
+            <input matInput type="hand" id="hand" name="hand" class="form-control" [(ngModel)]="hand" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="input">
+            <mat-label for="rating">Rating</mat-label>
+            <input matInput type="rating" id="rating" name="rating" class="form-control" [(ngModel)]="rating" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="input">
+            <mat-label for="registrationDate">Registration date</mat-label>
+            <input matInput type="registrationDate" id="registrationDate" name="registrationDate" class="form-control" [(ngModel)]="registrationDate" />
+          </mat-form-field>
+        </div>
         
-        <button mat-raised-button class="button" type="submit">Create</button>
-    </form>
+      </div>
+    </div>
+    <button class="button" type="submit">Create</button>
+  </form>
 </body>

@@ -22,11 +22,11 @@ export class CommentsComponent implements OnInit {
   constructor(private commentsService: CommentsService) { }
 
   ngOnInit(): void {
-    this.commentsService.getComment().subscribe(comments => this.comments = comments); //fetching comments 
+    this.commentsService.getComment().subscribe((comments) => this.comments = comments); //fetching comments 
   } 
 
   addComment(value: string) {
-    this.commentsService.createComment(value).subscribe(createdComment => this.comments.push())
+    this.commentsService.createComment(value).subscribe((createdComment) => this.comments.push())
   }
 
 }
