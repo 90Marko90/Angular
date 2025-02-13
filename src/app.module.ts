@@ -23,6 +23,7 @@ import { WelcomeContentComponent } from './app/welcome-content/welcome-content.c
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatFormFieldModule } from '@angular/material/form-field'; 
 import { AxiosService } from './axios.service';
+import { MatchComponent } from './app/match/match.component';
 
 
 
@@ -53,6 +54,7 @@ import { AxiosService } from './axios.service';
     ButtonComponent,
     SigninComponent,
     WelcomeContentComponent,
+    MatchComponent,
   ],
   providers: [AxiosService, CommentsService, provideAnimationsAsync()],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

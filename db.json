@@ -1,5 +1,32 @@
 {
   "comments": [
-    
+    {
+      "id": "17da",
+      "body": "comments",
+      "user": "Marko Kmetko",
+      "userid": 29,
+      "createdAt": "13. 2. 2025 14:02:52"
+    },
+    {
+      "id": "520c",
+      "body": "comment",
+      "user": "Marko Kmetko",
+      "userid": 40,
+      "createdAt": "13. 2. 2025 14:03:03"
+    },
+    {
+      "id": "5d65",
+      "body": "comment",
+      "user": "Marko Kmetko",
+      "userid": 31,
+      "createdAt": "13. 2. 2025 14:03:12"
+    },
+    {
+      "id": "c9ea",
+      "body": "comment",
+      "user": "Marko Kmetko",
+      "userid": 10,
+      "createdAt": "13. 2. 2025 14:03:14"
+    }
   ]
 }

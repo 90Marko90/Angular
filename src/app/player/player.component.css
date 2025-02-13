@@ -1,30 +1,27 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 body {
-    margin-left: 150px;
+    margin-left: 100px;
 }
 
 h1 {
-    color:#314755;
-    position: fixed;
+    color: #314755;
+    position: relative;
     top: 100px;
+    font-size: 2rem;
+    text-decoration: underline hotpink;
 }
 
 form {
-    position: fixed; 
-    top: 130px;
+    position: relative;
+    top: 100px;
+    width: 40%;
 }
 
 .prime-div {
     display: flex;
-    margin-top: 50px;
 }
 
-.left {
-    margin-right: 30px;
-}
-
-.middle {
-    margin-right: 30px;
+.left, .middle, .right {
+    flex: 1;
 }
 
 button {
@@ -47,8 +44,38 @@ button:hover {
 }
 
 .select {
-    position: fixed;
+    position: relative;
     top: 100px;
     font-weight: bold;
     font-size: 15px;
-  }
+}
+
+table {
+    margin-top: 200px;
+    width: 90%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background: #fff;
+    margin-bottom: 150px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    border-radius: 15px;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: aliceblue;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}

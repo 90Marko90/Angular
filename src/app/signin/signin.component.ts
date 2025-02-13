@@ -9,7 +9,12 @@ import { WelcomeContentComponent } from '../welcome-content/welcome-content.comp
 @Component({
 	selector: 'app-signin',
 	standalone: true,
-	imports: [FormsModule, CommonModule, LogInComponent, ButtonComponent, WelcomeContentComponent],
+	imports: [
+		FormsModule,
+		CommonModule,
+		LogInComponent,
+		ButtonComponent,
+		WelcomeContentComponent],
 	templateUrl: './signin.component.html',
 	styleUrl: './signin.component.css'
 })
@@ -19,6 +24,26 @@ export class SigninComponent {
 	data: string[] = [];
 
 	constructor(private axiosService: AxiosService) { }
+
+	ngOnInit(): void {
+		this.axiosService.request(
+			"GET",
+			"/messages",
+			{}).then(
+				(response) => {
+					this.data = response.data;
+				}).catch(
+					(error) => {
+						if (error.response && error.response.status === 401) {
+							this.axiosService.setAuthToken(null);
+						} else if (error.response) {
+							this.data = error.response.code;
+						} else {
+							console.log('Unexpected error:', error);
+						}
+					}
+				);
+	}
 
 	showComponent(componentToShow: string): void {
 		this.componentToShow = componentToShow;
@@ -62,25 +87,4 @@ export class SigninComponent {
 					}
 				);
 	}
-
-	ngOnInit(): void {
-		this.axiosService.request(
-			"GET",
-			"/messages",
-			{}).then(
-				(response) => {
-					this.data = response.data;
-				}).catch(
-					(error) => {
-						if (error.response && error.response.status === 401) {
-							this.axiosService.setAuthToken(null);
-						} else if (error.response) {
-							this.data = error.response.code;
-						} else {
-							console.log('Unexpected error:', error);
-						}
-					}
-				);
-	}
-
 }

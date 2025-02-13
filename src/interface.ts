@@ -1,8 +1,13 @@
-export interface Match {
-  Player1: string; 
-  Player2: string;
-  category: boolean;
-
+export interface Player {
+  firstName: string,
+  lastName: string,
+  email: string,
+  gender: string,
+  birthDate: Date;
+  leagueStatus: string,
+  hand: string,
+  rating: number,
+  registrationDate: Date,
 }
 
 export interface CommentInterface {

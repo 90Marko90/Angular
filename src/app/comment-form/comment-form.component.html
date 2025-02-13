@@ -1,10 +1,10 @@
 <body>
-<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-    <mat-form-field class="comment-area">
-        <mat-label>Add a comment</mat-label>
-        <textarea matInput type="text" formControlName="body" required></textarea>
-    </mat-form-field>
-    <br>
-    <button mat-raised-button type="submit" [disabled]="myForm.invalid">Post</button>
-</form>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="comment-area">
+            <mat-label>Add a comment</mat-label>
+            <textarea matInput type="text" formControlName="body" required></textarea>
+        </mat-form-field>
+        <br>
+        <button mat-flat-button type="submit" [disabled]="myForm.invalid">Post</button>
+    </form>
 </body>

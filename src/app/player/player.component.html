@@ -1,28 +1,19 @@
 <body>
-  <!-- <mat-form-field class="select">
-    <mat-label>Select</mat-label>
-    <mat-select class="select" [(ngModel)]="matchCategory" (ngModelChange)="dropDown($event)">
-      <mat-option value="0">All</mat-option>
-      <mat-option value="1">Player 1</mat-option>
-      <mat-option value="2">Player 2</mat-option>
-    </mat-select>
-  </mat-form-field> -->
-
+  <div>
   <h1>Create a player</h1>
-  <form (ngSubmit)="onSubmitPlayer()" #loginForm="ngForm">
+  <form (ngSubmit)="onSubmitPlayer(SubmitForm.value)" #SubmitForm="ngForm">
     <div class="prime-div">
       <div class="left">
         <div>
           <mat-form-field class="input">
             <mat-label for="firstName">First name</mat-label>
-            <input matInput type="firstName" id="firstName" name="firstName" class="form-control" [(ngModel)]="firstName" />
+            <input matInput type="text" id="firstName" name="firstName" class="form-control" [(ngModel)]="firstName" />
           </mat-form-field>
         </div>
-
         <div>
           <mat-form-field class="input">
             <mat-label for="lastName">Last name</mat-label>
-            <input matInput type="lastName" id="lastName" name="lastName" class="form-control" [(ngModel)]="lastName" />
+            <input matInput type="text" id="lastName" name="lastName" class="form-control" [(ngModel)]="lastName" />
           </mat-form-field>
         </div>
         <div>
@@ -32,50 +23,78 @@
           </mat-form-field>
         </div>
       </div>
-
       <div class="middle">
         <div>
           <mat-form-field class="input">
             <mat-label for="gender">Gender</mat-label>
-            <input matInput type="gender" id="gender" name="gender" class="form-control" [(ngModel)]="gender" />
+            <input matInput type="text" id="gender" name="gender" class="form-control" [(ngModel)]="gender" />
           </mat-form-field>
         </div>
         <div>
           <mat-form-field class="input">
             <mat-label for="birthDate">Birth date</mat-label>
-            <input matInput type="birthDate" id="birthDate" name="birthDate" class="form-control" [(ngModel)]="birthDate" />
+            <input matInput type="date" id="birthDate" name="birthDate" class="form-control" [(ngModel)]="birthDate" />
           </mat-form-field>
         </div>
         <div>
           <mat-form-field class="input">
             <mat-label for="leagueStatus">League status</mat-label>
-            <input matInput type="leagueStatus" id="leagueStatus" name="leagueStatus" class="form-control" [(ngModel)]="leagueStatus" />
+            <input matInput type="text" id="leagueStatus" name="leagueStatus" class="form-control" [(ngModel)]="leagueStatus" />
           </mat-form-field>
         </div>
       </div>
-
       <div class="right">
         <div>
           <mat-form-field class="input">
             <mat-label for="hand">Hand you play</mat-label>
-            <input matInput type="hand" id="hand" name="hand" class="form-control" [(ngModel)]="hand" />
+            <input matInput type="text" id="hand" name="hand" class="form-control" [(ngModel)]="hand" />
           </mat-form-field>
         </div>
         <div>
           <mat-form-field class="input">
             <mat-label for="rating">Rating</mat-label>
-            <input matInput type="rating" id="rating" name="rating" class="form-control" [(ngModel)]="rating" />
+            <input matInput type="number" id="rating" name="rating" class="form-control" [(ngModel)]="rating" />
           </mat-form-field>
         </div>
         <div>
           <mat-form-field class="input">
             <mat-label for="registrationDate">Registration date</mat-label>
-            <input matInput type="registrationDate" id="registrationDate" name="registrationDate" class="form-control" [(ngModel)]="registrationDate" />
+            <input matInput type="date" id="registrationDate" name="registrationDate" class="form-control" [(ngModel)]="registrationDate" />
           </mat-form-field>
         </div>
-        
       </div>
     </div>
-    <button class="button" type="submit">Create</button>
+    <button mat-flat-button class="button" type="submit">Create</button>
   </form>
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>Birth Date</th>
+          <th>League Status</th>
+          <th>Hand</th>
+          <th>Rating</th>
+          <th>Registration Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let player of players">
+          <td>{{player.firstName}}</td>
+          <td>{{player.lastName}}</td>
+          <td>{{player.email}}</td>
+          <td>{{player.gender}}</td>
+          <td>{{player.birthDate | date}}</td>
+          <td>{{player.leagueStatus}}</td>
+          <td>{{player.hand}}</td>
+          <td>{{player.rating}}</td>
+          <td>{{player.registrationDate | date}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 </body>

@@ -1,11 +1,19 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @Component({
 	selector: 'app-log-in',
 	standalone: true,
-	imports: [FormsModule, CommonModule],
+	imports: [
+		FormsModule, 
+		CommonModule, 
+		MatFormFieldModule,
+		MatInputModule,
+		MatSelectModule,],
 	templateUrl: './log-in.component.html',
 	styleUrl: './log-in.component.css'
 })

@@ -1,26 +1,32 @@
 nav {
-  background: #00c6ff;  /* fallback for old browsers */ 
-  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+  background: #00c6ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 20px;
-  /* apply flex to get right and left navigations in a row */
   display: flex;
   position: fixed;
-  /* push both the blocks to the edges using justify-content */
   justify-content: space-between;
   width: 100%;
+  z-index: 1000;
+  /* Ensure it stays above the content */
 }
 
-.right-side, .left-side {
-  list-style-type: none; 
+.right-side,
+.left-side {
+  list-style-type: none;
   margin: 0px 100px 0px 100px;
 }
 
-.right-side li, .left-side li {
+.right-side li,
+.left-side li {
   display: inline-block;
 }
 
-.right-side li a, .left-side li a {
+.right-side li a,
+.left-side li a {
   text-decoration: none;
   display: block;
   align-content: center;
@@ -31,14 +37,15 @@ nav {
   font-weight: bold;
 }
 
-  .right-side li a:hover, .left-side li a:hover {
-    color: white;
-  }
+.right-side li a:hover,
+.left-side li a:hover {
+  color: white;
+}
 
 footer {
-  background: #00c6ff;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+  background: #00c6ff;
+  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+  background: linear-gradient(to right, #0072ff, #00c6ff);
   display: flex;
   position: fixed;
   bottom: 0;
@@ -97,15 +104,19 @@ ul {
 .item:nth-child(1) {
   --bg-color: #316FF6;
 }
+
 .item:nth-child(2) {
   --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);
 }
+
 .item:nth-child(3) {
   --bg-color: #0077b5;
 }
+
 .item:nth-child(4) {
   --bg-color: #ff0000;
 }
+
 .item:nth-child(5) {
   --bg-color: #1DA1F2;
 }
