@@ -53,6 +53,16 @@ footer {
   justify-content: right;
   border-radius: 15px;
 }
+p {
+  display: flex;
+  position: fixed;
+  font-weight: bold;
+  bottom: 10px;
+  left: 100px;
+  width: 100%;
+  justify-content: left;
+  border-radius: 15px;
+}
 
 ul {
   display: flex;

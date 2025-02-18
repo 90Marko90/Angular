@@ -25,7 +25,6 @@ export class LogInComponent {
   username: string = "";
   login: string = "";
   password: string = "";
-  role: string = "";
 
 	onLoginTab(): void {
 		this.active = "login";
@@ -40,6 +39,6 @@ export class LogInComponent {
   }
 
   onSubmitRegister(): void {
-    this.onSubmitRegisterEvent.emit({"username": this.username, "password": this.password, "role": this.role});
+    this.onSubmitRegisterEvent.emit({"username": this.username, "password": this.password});
   }
 }

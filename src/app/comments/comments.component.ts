@@ -12,9 +12,9 @@ import { CommonModule } from '@angular/common';
   templateUrl: './comments.component.html',
   styleUrls: ['./comments.component.css']
 })
-
+//json-server --watch db.json 
 export class CommentsComponent implements OnInit {
-  comments: CommentInterface[] = []; //json-server --watch db.json 
+  comments: CommentInterface[] = []; 
   user!: string;
   body!: string;
   createdAt!: Date 
@@ -22,7 +22,7 @@ export class CommentsComponent implements OnInit {
   constructor(private commentsService: CommentsService) { }
 
   ngOnInit(): void {
-    this.commentsService.getComment().subscribe((comments) => this.comments = comments); //fetching comments 
+    this.commentsService.getComment().subscribe((comments) => this.comments = comments);
   } 
 
   addComment(value: string) {

@@ -23,7 +23,7 @@ import { WelcomeContentComponent } from './app/welcome-content/welcome-content.c
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatFormFieldModule } from '@angular/material/form-field'; 
 import { AxiosService } from './axios.service';
-import { MatchComponent } from './app/match/match.component';
+import { LeagueComponent } from './app/league/league.component';
 
 
 
@@ -33,7 +33,7 @@ import { MatchComponent } from './app/match/match.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule, // allow *ngFor *ngIf 
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     MatInputModule, 
@@ -53,8 +53,8 @@ import { MatchComponent } from './app/match/match.component';
     LogInComponent,
     ButtonComponent,
     SigninComponent,
-    WelcomeContentComponent,
-    MatchComponent,
+    WelcomeContentComponent, 
+    LeagueComponent
   ],
   providers: [AxiosService, CommentsService, provideAnimationsAsync()],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

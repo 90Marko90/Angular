@@ -1,0 +1,75 @@
+body {
+    margin-left: 100px;
+}
+h1 {
+top: 100px;
+position: relative;
+color: #314755;
+font-size: 2rem;
+text-decoration: underline hotpink;
+} 
+h2 {
+top: 50px;
+position: relative; 
+color: #314755; 
+font-size: 2rem;
+text-decoration: underline hotpink;
+margin-left: 50%;
+}
+.match-table {
+    top: 150px;
+    width: 40%;
+    border-collapse: collapse;
+    font-weight: bold;
+    background: #fff;
+    margin-bottom: 150px;
+    position: fixed;
+    font-size: 0.9rem;
+}
+.match-td {
+    text-align: center;
+    padding: 10px;
+}
+.match-th {
+    background: linear-gradient(to right, #ff0000d8, #ff00004e);
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+.match-tr:nth-child(even) {
+    background-color: rgba(238, 144, 144, 0.134)
+}
+.match-tr:hover {
+    background-color: #f1f1f1;
+} 
+.league {
+    display: flex;
+    position: relative;
+    margin-left: 50%;
+}
+.league-table {
+    top: 150px;
+    width: 40%;
+    border-collapse: collapse;
+    font-weight: bold;
+    background: #fff;
+    margin-bottom: 150px;
+    position: fixed;
+    font-size: 0.9rem;
+}
+.league-td {
+    text-align: center;
+    padding: 10px;
+}
+.league-th {
+    background: linear-gradient(to right, #ea00ffa0, #fb00ff3a);
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+.league-tr:nth-child(odd) {
+    background-color: #f700ff18
+}
+.league-tr:hover {
+    background-color: #f1f1f1;
+} 

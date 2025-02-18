@@ -1,10 +1,27 @@
-div {
-    position: relative;
-    margin-top: 150px;
-    font-size: 20px;
-    overflow: hidden;
+body {
+    height: 100%;
+    margin: 0;
     display: flex;
+    font-weight: bold;
+    font-size: larger;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
+    text-align: center;
+    background-color: #faf8fa;
+}
+
+.container {
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: #6c757d;
 }

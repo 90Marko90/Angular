@@ -10,6 +10,17 @@ export interface Player {
   registrationDate: Date,
 }
 
+export interface League {
+  id: string;
+  name: string;
+  players: Player[];
+  matches: Match[];
+}
+
+export interface Match {
+  location: string;
+}
+
 export interface CommentInterface {
  id: string | number,
  body: string, 

@@ -31,12 +31,12 @@ export class PlayerComponent implements OnInit {
   players: any[] = [];
   firstName: string = "";
   lastName: string = "";
-  email: string = "@";
+  email: string = "";
   gender: string = "";
   birthDate: Date = new Date();
-  leagueStatus: Boolean = false;
+  leagueStatus: Boolean | undefined;
   hand: string = "";
-  rating: number = 0;
+  rating: number | undefined;
   registrationDate: Date = new Date();
 
 
@@ -92,4 +92,9 @@ export class PlayerComponent implements OnInit {
         }
       });
   }
+  removePlayer(i: number) {
+    this.players.splice(i, 1);
+  }
+  
+
 }
