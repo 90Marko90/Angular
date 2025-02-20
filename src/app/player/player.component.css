@@ -11,12 +11,12 @@ h1 {
 form {
     position: relative;
     top: 100px;
-    width: 40%;
+    width: 50%;
 }
 .prime-div {
     display: flex;
 }
-.left, .middle, .right {
+.left, .middle-left, .middle-right, .right {
     flex: 1;
 }
 .button {

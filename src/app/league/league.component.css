@@ -9,21 +9,21 @@ font-size: 2rem;
 text-decoration: underline hotpink;
 } 
 h2 {
-top: 50px;
-position: relative; 
+top: 100px;
+position: fixed;
 color: #314755; 
 font-size: 2rem;
 text-decoration: underline hotpink;
-margin-left: 50%;
+margin-left: 900px;
 }
 .match-table {
-    top: 150px;
+    top: 100px;
     width: 40%;
     border-collapse: collapse;
     font-weight: bold;
     background: #fff;
-    margin-bottom: 150px;
-    position: fixed;
+    margin-bottom: 250px;
+    position: relative;
     font-size: 0.9rem;
 }
 .match-td {

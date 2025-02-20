@@ -29,28 +29,27 @@
     </table>
   </div> 
   <h2>League</h2>
-  <div class="league">
-    <table class="league-table">
-      <thead class="league-thead">
-        <tr class="league-tr">
-          <th class="league-th">League name</th>
-          <th class="league-th">Players</th>
-          <th class="league-th">Matches</th>
-        </tr>
-      </thead>
-      <tbody class="league-tbody">
-        <tr class="league-tr">
-          <td class="league-td">
-            <span *ngFor="let league of leagues">{{league.name}}<br></span>
-          </td>
-          <td class="league-td">
-            <span *ngFor="let player of players">{{player.firstName}}<br></span>
-          </td>
-          <td class="league-td">
-            <span *ngFor="let match of matches">{{match.location}}<br></span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<div class="league">
+  <table class="league-table">
+    <thead class="league-thead">
+      <tr class="league-tr">
+        <th class="league-th">League name</th>
+        <th class="league-th">Players</th>
+        <th class="league-th">Matches</th>
+      </tr>
+    </thead>
+    <tbody class="league-tbody">
+      <tr *ngFor="let league of leagues" class="league-tr">
+        <td class="league-td">{{ league.name }}</td>
+        <td class="league-td">
+          <span *ngFor="let player of league.players">{{ player.firstName }}<br></span>
+        </td>
+        <td class="league-td">
+          <span *ngFor="let match of league.matches">{{ match.location }}<br></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 </body>
