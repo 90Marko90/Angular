@@ -41,7 +41,12 @@ export class PlayerComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.axiosService.request(
+    this.getPlayers();
+  }
+
+
+    getPlayers(): void {
+      this.axiosService.request(
       "GET",
       "/players/getAllPlayers",
       {})
@@ -59,7 +64,8 @@ export class PlayerComponent implements OnInit {
             }
           }
         );
-  }
+      }
+
 
   onSubmitPlayer(input:any): void {
     this.axiosService.request(
@@ -92,9 +98,10 @@ export class PlayerComponent implements OnInit {
         }
       });
   }
+
   removePlayer(i: number) {
     this.players.splice(i, 1);
   }
-  
+
 
 }

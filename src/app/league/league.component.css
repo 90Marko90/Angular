@@ -1,51 +1,15 @@
 body {
     margin-left: 100px;
 }
-h1 {
-top: 100px;
-position: relative;
-color: #314755;
-font-size: 2rem;
-text-decoration: underline hotpink;
-} 
 h2 {
 top: 100px;
-position: fixed;
-color: #314755; 
+position: relative;
 font-size: 2rem;
 text-decoration: underline hotpink;
-margin-left: 900px;
 }
-.match-table {
-    top: 100px;
-    width: 40%;
-    border-collapse: collapse;
-    font-weight: bold;
-    background: #fff;
-    margin-bottom: 250px;
-    position: relative;
-    font-size: 0.9rem;
-}
-.match-td {
-    text-align: center;
-    padding: 10px;
-}
-.match-th {
-    background: linear-gradient(to right, #ff0000d8, #ff00004e);
-    text-align: center;
-    border-radius: 10px;
-    padding: 10px;
-}
-.match-tr:nth-child(even) {
-    background-color: rgba(238, 144, 144, 0.134)
-}
-.match-tr:hover {
-    background-color: #f1f1f1;
-} 
 .league {
     display: flex;
     position: relative;
-    margin-left: 50%;
 }
 .league-table {
     top: 150px;
@@ -72,4 +36,4 @@ margin-left: 900px;
 }
 .league-tr:hover {
     background-color: #f1f1f1;
-} 
+}

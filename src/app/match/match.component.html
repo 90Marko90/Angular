@@ -1,0 +1,74 @@
+<body>
+  <h1>Match</h1>
+  <form (ngSubmit)="onSubmitMatch()" #SubmitForm="ngForm">
+  <div class="prime">
+    <div class="left">
+      <div class="search-container">
+        <mat-form-field class="search">
+          <mat-label>Search a player</mat-label>
+          <input matInput type="search" id="leftSearch" name="leftSearch" [(ngModel)]="leftSearch" (ngModelChange)="filterPlayersLeft()"/>
+        </mat-form-field>
+        <ul *ngIf="leftSearch.length > 0" class="player-list">
+          <li *ngFor="let player of filteredPlayersLeft" (click)="selectPlayerLeft(player)">{{ player.firstName }}</li>
+        </ul>
+      </div>
+      <div *ngFor="let i of [1, 2, 3, 4, 5]" class="input">
+        <mat-form-field>
+          <mat-label>Set {{ i }}</mat-label>
+          <input matInput type="number" id="set{{ i }}" name="set{{ i }}" [(ngModel)]="leftSets[i]"/>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="search-container">
+        <mat-form-field class="search">
+          <mat-label>Search a player</mat-label>
+          <input matInput type="search" id="rightSearch" name="rightSearch" [(ngModel)]="rightSearch" (ngModelChange)="filterPlayersRight()"/>
+        </mat-form-field>
+        <ul *ngIf="rightSearch.length > 0" class="player-list">
+          <li *ngFor="let player of filteredPlayersRight" (click)="selectPlayerRight(player)">{{ player.firstName }}</li>
+        </ul>
+      </div>
+      <div *ngFor="let n of [1, 2, 3, 4, 5]" class="input">
+        <mat-form-field>
+          <mat-label>Set {{ n }}</mat-label>
+          <input matInput type="number" id="set{{ n }}" name="set{{ n }}" [(ngModel)]="rightSets[n]"/>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <button mat-flat-button type="submit" class="button">Create</button>
+</form>
+
+  <div class="match">
+    <table class="match-table">
+      <thead class="match-thead">
+        <tr class="match-tr">
+          <th class="match-th">Players</th>
+          <th class="match-th">Sets</th>
+          <th class="match-th">Location</th>
+          <th class="match-th">Match Date</th>
+          <th class="match-th">Winner</th>
+        </tr>
+      </thead>
+      <tbody class="match-tbody">
+        <tr class="match-tr" *ngFor="let match of matches">
+          <td class="match-td">
+            {{ match.player1.firstName }} vs {{ match.player2.firstName }}
+          </td>
+          <td class="match-td">
+            Set 1: {{ match.player1_set1 }} - {{ match.player2_set1 }}<br />
+            Set 2: {{ match.player1_set2 }} - {{ match.player2_set2 }}<br />
+            Set 3: {{ match.player1_set3 }} - {{ match.player2_set3 }}<br />
+            Set 4: {{ match.player1_set4 }} - {{ match.player2_set4 }}<br />
+            Set 5: {{ match.player1_set5 }} - {{ match.player2_set5 }}
+          </td>
+          <td class="match-td">{{ match.location }}</td>
+          <td class="match-td">{{ match.dateTime }}</td>
+          <td class="match-td">{{ match.winner.firstName }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>

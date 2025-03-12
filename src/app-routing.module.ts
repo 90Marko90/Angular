@@ -5,15 +5,17 @@ import { HomeComponent } from './app/home/home.component'
 import { PlayerComponent } from './app/player/player.component';
 import { SigninComponent } from './app/signin/signin.component';
 import { LeagueComponent } from './app/league/league.component';
+import { MatchComponent } from './app/match/match.component';
 
-const routes: Routes = [ 
+const routes: Routes = [
   // Default route
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
   { path: 'Home', component: HomeComponent},
   { path: 'Player', component: PlayerComponent },
-  { path: 'Comments', component: CommentsComponent}, 
+  { path: 'Comments', component: CommentsComponent},
   { path: 'SignIn', component: SigninComponent},
-  { path: 'League', component: LeagueComponent}
+  { path: 'League', component: LeagueComponent},
+  { path: 'Match', component: MatchComponent},
 ]
 
 @NgModule({

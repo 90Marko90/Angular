@@ -1,55 +1,29 @@
 <body>
-  <h1>Match</h1>
-  <div class="match">
-    <table class="match-table">
-      <thead class="match-thead">
-        <tr class="match-tr">
-          <th class="match-th">Players and Sets</th>
-          <th class="match-th">Location</th>
-          <th class="match-th">Match date</th>
-          <th class="match-th">Winner</th>
+  <h2>League</h2>
+  <div class="league">
+    <table class="league-table">
+      <thead class="league-thead">
+        <tr class="league-tr">
+          <th class="league-th">League name</th>
+          <th class="league-th">Players</th>
+          <th class="league-th">Matches</th>
         </tr>
       </thead>
-      <tbody class="match-tbody">
-        <tr class="match-tr" *ngFor="let match of matches">
-          <td class="match-td">
-            <strong>{{match.player1.firstName}}&nbsp;vs&nbsp;{{match.player2.firstName}}</strong>
-            <br>
-            Set 1:&nbsp;{{match.player1_set1}}&nbsp;-&nbsp;{{match.player2_set1}}<br>
-            Set 2:&nbsp;{{match.player1_set2}}&nbsp;-&nbsp;{{match.player2_set2}}<br>
-            Set 3:&nbsp;{{match.player1_set3}}&nbsp;-&nbsp;{{match.player2_set3}}<br>
-            Set 4:&nbsp;{{match.player1_set4}}&nbsp;-&nbsp;{{match.player2_set4}}<br>
-            Set 5:&nbsp;{{match.player1_set5}}&nbsp;-&nbsp;{{match.player2_set5}}
+      <tbody class="league-tbody">
+        <tr *ngFor="let league of leagues" class="league-tr">
+          <td class="league-td">{{ league.name }}</td>
+          <td class="league-td">
+            <span *ngFor="let player of league.players"
+              >{{ player.firstName }}<br
+            /></span>
           </td>
-          <td class="match-td">{{match.location}}</td>
-          <td class="match-td">{{match.dateTime}}</td>
-          <td class="match-td">{{match.winner.firstName}}</td>
+          <td class="league-td">
+            <span *ngFor="let match of league.matches"
+              >{{ match.location }}<br
+            /></span>
+          </td>
         </tr>
       </tbody>
     </table>
-  </div> 
-  <h2>League</h2>
-<div class="league">
-  <table class="league-table">
-    <thead class="league-thead">
-      <tr class="league-tr">
-        <th class="league-th">League name</th>
-        <th class="league-th">Players</th>
-        <th class="league-th">Matches</th>
-      </tr>
-    </thead>
-    <tbody class="league-tbody">
-      <tr *ngFor="let league of leagues" class="league-tr">
-        <td class="league-td">{{ league.name }}</td>
-        <td class="league-td">
-          <span *ngFor="let player of league.players">{{ player.firstName }}<br></span>
-        </td>
-        <td class="league-td">
-          <span *ngFor="let match of league.matches">{{ match.location }}<br></span>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+  </div>
 </body>

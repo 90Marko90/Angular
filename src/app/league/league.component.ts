@@ -1,11 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 import { AxiosService } from 'src/axios.service';
+import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-league',
   standalone: true,
-  imports: [CommonModule], //must import this module for ngFor
+  imports: [
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        MatButtonModule,
+        FormsModule,
+        CommonModule],
   templateUrl: './league.component.html',
   styleUrl: './league.component.css'
 })
@@ -13,6 +24,7 @@ export class LeagueComponent implements OnInit {
   matches: any[] = [];
   players: any[] = [];
   leagues: any[] = [];
+  search: string = '';
 
   constructor(private axiosService: AxiosService) { }
 
